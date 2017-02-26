@@ -10,7 +10,7 @@ import UIKit
 
 class HomeController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIGestureRecognizerDelegate {
   
-  // MARK: Properties
+  // MARK: - Properties
   var color: DynamicColor?
   var tintColors: [Tint] = []
   fileprivate let cellId = "cellId"
@@ -40,7 +40,7 @@ class HomeController: UIViewController, UICollectionViewDelegate, UICollectionVi
     return button
   }()
   
-  // MARK: Lifecycle
+  // MARK: - Lifecycle
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -72,7 +72,7 @@ class HomeController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
   }
   
-  // MARK: Navigation
+  // MARK: - Navigation
   
   func navigationSwipe() {
     navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Sign Out", style: .plain, target: self, action: #selector(handleSignOut))
@@ -96,7 +96,7 @@ class HomeController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
   }
   
-  // MARK: SignOut
+  // MARK: - SignOut
   
   func handleSignOut() {
     UserDefaults.standard.setIsLoggedIn(value: false)
@@ -149,7 +149,7 @@ class HomeController: UIViewController, UICollectionViewDelegate, UICollectionVi
     collectionView.reloadData()
   }
   
-  // MARK: Selected Cell
+  // MARK: - Selected Cell
   
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     let controller = ColorHarmoniesController()
@@ -161,7 +161,7 @@ class HomeController: UIViewController, UICollectionViewDelegate, UICollectionVi
     controller.color = color.currentColor
   }
   
-  // MARK: Collection View Data Source
+  // MARK: - Collection View Data Source
   
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return tintColors.count

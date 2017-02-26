@@ -9,15 +9,7 @@
 import UIKit
 
 struct Tint {
-  
   let hexLabel: String
   let hexLabelColor: DynamicColor
   let currentColor: DynamicColor
-  
-  init(hexLabel: String, hexLabelColor: DynamicColor, currentColor: DynamicColor) {
-    self.hexLabel = hexLabel
-    self.hexLabelColor = hexLabelColor
-    self.currentColor = currentColor
-  }
-  
 }
