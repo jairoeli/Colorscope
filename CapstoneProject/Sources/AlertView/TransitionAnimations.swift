@@ -46,13 +46,12 @@ final internal class BounceUpTransition: TransitionAnimator {
             UIView.animate(withDuration: outDuration, delay: 0.0, options: [.curveEaseIn], animations: {
                 self.from.view.bounds.origin = CGPoint(x: 0, y: -self.from.view.bounds.size.height)
                 self.from.view.alpha = 0.0
-            }) { (completed) in
+            }) { (_) in
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
             }
         }
     }
 }
-
 
 /// Dialog bounces in from top and is dismissed to top
 final internal class BounceDownTransition: TransitionAnimator {
@@ -76,7 +75,7 @@ final internal class BounceDownTransition: TransitionAnimator {
             UIView.animate(withDuration: outDuration, delay: 0.0, options: [.curveEaseIn], animations: {
                 self.from.view.bounds.origin = CGPoint(x: 0, y: self.from.view.bounds.size.height)
                 self.from.view.alpha = 0.0
-            }) { (completed) in
+            }) { (_) in
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
             }
         }
@@ -105,7 +104,7 @@ final internal class ZoomTransition: TransitionAnimator {
             UIView.animate(withDuration: outDuration, delay: 0.0, options: [.curveEaseIn], animations: {
                 self.from.view.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
                 self.from.view.alpha = 0.0
-            }) { (completed) in
+            }) { (_) in
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
             }
         }
@@ -134,7 +133,7 @@ final internal class FadeTransition: TransitionAnimator {
         case .out:
             UIView.animate(withDuration: outDuration, delay: 0.0, options: [.curveEaseIn], animations: {
                 self.from.view.alpha = 0.0
-            }) { (completed) in
+            }) { (_) in
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
             }
         }
@@ -153,7 +152,7 @@ final internal class DismissInteractiveTransition: TransitionAnimator {
         UIView.animate(withDuration: outDuration, delay: 0.0, options: [], animations: {
             self.from.view.bounds.origin = CGPoint(x: 0, y: -self.from.view.bounds.size.height)
             self.from.view.alpha = 0.0
-        }) { (completed) in
+        }) { (_) in
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         }
     }

@@ -9,20 +9,20 @@
 import Foundation
 
 extension UserDefaults {
-  
+
   enum UserDefaultsKeys: String {
     case IsLoggedIn
   }
-  
+
   // Setter
   func setIsLoggedIn(value: Bool) {
     set(value, forKey: UserDefaultsKeys.IsLoggedIn.rawValue)
     synchronize()
   }
-  
+
   // Getter
   func isLoggedIn() -> Bool {
     return bool(forKey: UserDefaultsKeys.IsLoggedIn.rawValue)
   }
-  
+
 }

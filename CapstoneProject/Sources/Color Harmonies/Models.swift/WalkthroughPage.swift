@@ -9,9 +9,9 @@
 import Foundation
 
 struct WalkthroughPage {
-  
+
   let title: String
   let message: String
   let imageName: String
-  
+
 }

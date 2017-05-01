@@ -12,6 +12,7 @@ final public class PopupDialogDefaultViewController: UIViewController {
 
     public var standardView: PopupDialogDefaultView {
        return view as! PopupDialogDefaultView
+      // swiftlint:disable:previous force_cast
     }
 
     override public func loadView() {

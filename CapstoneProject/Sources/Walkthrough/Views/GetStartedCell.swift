@@ -9,16 +9,16 @@
 import UIKit
 
 class GetStartedCell: UICollectionViewCell {
-  
+
   // MARK: Properties
-  
+
   public weak var delegate: LoginControllerDelegate?
-  
+
   let logoImageView = UIImageView {
     $0.image = #imageLiteral(resourceName: "wallpaper")
     $0.contentMode = .scaleAspectFill
   }
-  
+
   lazy var signUp: UIButton = {
     let button = UIButton(type: .system)
     button.backgroundColor = UIColor(white: 0.9, alpha: 1)
@@ -28,7 +28,7 @@ class GetStartedCell: UICollectionViewCell {
     button.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
     return button
   }()
-  
+
   let headlineLabel = UILabel {
     $0.text = "Start exploring and discover beautiful color schemes!"
     $0.textColor = Eden.Independence.color
@@ -37,35 +37,35 @@ class GetStartedCell: UICollectionViewCell {
     $0.baselineAdjustment = .alignCenters
     $0.numberOfLines = 3
   }
-  
+
   let lineSeperatorView = UIView {
     $0.backgroundColor = .clear
   }
-  
+
   override init(frame: CGRect) {
     super.init(frame: frame)
     addSubview(logoImageView)
     addSubview(signUp)
     addSubview(headlineLabel)
     addSubview(lineSeperatorView)
-    
+
     _ = logoImageView.anchorToTop(top: topAnchor, left: leftAnchor, bottom: lineSeperatorView.topAnchor, right: rightAnchor)
-    
+
     _ = headlineLabel.anchor(top: lineSeperatorView.bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 24, leftConstant: 28, bottomConstant: 0, rightConstant: 28, widthConstant: 0, heightConstant: 0)
-    
+
     _ = signUp.anchor(top: nil, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 60)
-    
+
     _ = lineSeperatorView.anchor(top: topAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: frame.height - 330, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 1)
-    
+
   }
-  
+
   required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
-  
+
   // MARK: Action
   func handleLogin() {
     delegate?.finishLoggingIn()
   }
-  
+
 }

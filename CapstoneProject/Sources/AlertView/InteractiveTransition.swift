@@ -20,7 +20,7 @@ final class InteractiveTransition: UIPercentDrivenInteractiveTransition {
 
     // The view controller containing the views
     // with attached gesture recognizers
-    weak var viewController: UIViewController? = nil
+    weak var viewController: UIViewController?
 
     @objc func handlePan(_ sender: UIPanGestureRecognizer) {
 
