@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9C00D87C1DCAAB710045DF09 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C00D86C1DCAAB710045DF09 /* FXBlurView.m */; };
 		9C00D87D1DCAAB710045DF09 /* InteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C00D86D1DCAAB710045DF09 /* InteractiveTransition.swift */; };
 		9C00D87E1DCAAB710045DF09 /* PopupDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C00D86E1DCAAB710045DF09 /* PopupDialog.swift */; };
 		9C00D8801DCAAB710045DF09 /* PopupDialogButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C00D8701DCAAB710045DF09 /* PopupDialogButton.swift */; };
@@ -36,6 +35,7 @@
 		9C3C47601DA55B56000AEC00 /* UserDefaults+helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3C475F1DA55B56000AEC00 /* UserDefaults+helpers.swift */; };
 		9C3C47621DA55DEE000AEC00 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3C47611DA55DEE000AEC00 /* HomeController.swift */; };
 		9C4B13151DB98C1600703F2A /* GothamRounded-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9C4B13141DB98C1600703F2A /* GothamRounded-Book.otf */; };
+		9C4EEC891EB7723B00FC98CA /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4EEC881EB7723B00FC98CA /* FXBlurView.m */; };
 		9C5751CD1DB9520F00CE3095 /* RandomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5751C91DB9520F00CE3095 /* RandomColor.swift */; };
 		9C5751CE1DB9520F00CE3095 /* ColorDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5751CA1DB9520F00CE3095 /* ColorDefinition.swift */; };
 		9C5751CF1DB9520F00CE3095 /* Luminosity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5751CB1DB9520F00CE3095 /* Luminosity.swift */; };
@@ -75,75 +75,75 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9C00D86A1DCAAB700045DF09 /* Colorscope-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Colorscope-Bridging-Header.h"; sourceTree = "<group>"; };
-		9C00D86B1DCAAB710045DF09 /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
-		9C00D86C1DCAAB710045DF09 /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
-		9C00D86D1DCAAB710045DF09 /* InteractiveTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractiveTransition.swift; sourceTree = "<group>"; };
-		9C00D86E1DCAAB710045DF09 /* PopupDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDialog.swift; sourceTree = "<group>"; };
-		9C00D8701DCAAB710045DF09 /* PopupDialogButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDialogButton.swift; sourceTree = "<group>"; };
-		9C00D8711DCAAB710045DF09 /* PopupDialogContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDialogContainerView.swift; sourceTree = "<group>"; };
-		9C00D8721DCAAB710045DF09 /* PopupDialogDefaultButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDialogDefaultButtons.swift; sourceTree = "<group>"; };
-		9C00D8731DCAAB710045DF09 /* PopupDialogDefaultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDialogDefaultView.swift; sourceTree = "<group>"; };
-		9C00D8741DCAAB710045DF09 /* PopupDialogDefaultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDialogDefaultViewController.swift; sourceTree = "<group>"; };
-		9C00D8751DCAAB710045DF09 /* PopupDialogOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupDialogOverlayView.swift; sourceTree = "<group>"; };
-		9C00D8761DCAAB710045DF09 /* PresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
-		9C00D8771DCAAB710045DF09 /* PresentationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationManager.swift; sourceTree = "<group>"; };
-		9C00D8781DCAAB710045DF09 /* TransitionAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionAnimations.swift; sourceTree = "<group>"; };
-		9C00D8791DCAAB710045DF09 /* TransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionAnimator.swift; sourceTree = "<group>"; };
-		9C00D87A1DCAAB710045DF09 /* UIView+Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Animations.swift"; sourceTree = "<group>"; };
-		9C00D87B1DCAAB710045DF09 /* UIViewController+Visibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Visibility.swift"; sourceTree = "<group>"; };
-		9C00D88C1DCAB8BE0045DF09 /* ColorHarmoniesController + Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ColorHarmoniesController + Helper.swift"; sourceTree = "<group>"; };
-		9C3359491DA7F7CE0022FDF6 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		9C00D86D1DCAAB710045DF09 /* InteractiveTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InteractiveTransition.swift; path = CapstoneProject/Sources/AlertView/InteractiveTransition.swift; sourceTree = "<group>"; };
+		9C00D86E1DCAAB710045DF09 /* PopupDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopupDialog.swift; path = CapstoneProject/Sources/AlertView/PopupDialog.swift; sourceTree = "<group>"; };
+		9C00D8701DCAAB710045DF09 /* PopupDialogButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopupDialogButton.swift; path = CapstoneProject/Sources/AlertView/PopupDialogButton.swift; sourceTree = "<group>"; };
+		9C00D8711DCAAB710045DF09 /* PopupDialogContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopupDialogContainerView.swift; path = CapstoneProject/Sources/AlertView/PopupDialogContainerView.swift; sourceTree = "<group>"; };
+		9C00D8721DCAAB710045DF09 /* PopupDialogDefaultButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopupDialogDefaultButtons.swift; path = CapstoneProject/Sources/AlertView/PopupDialogDefaultButtons.swift; sourceTree = "<group>"; };
+		9C00D8731DCAAB710045DF09 /* PopupDialogDefaultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopupDialogDefaultView.swift; path = CapstoneProject/Sources/AlertView/PopupDialogDefaultView.swift; sourceTree = "<group>"; };
+		9C00D8741DCAAB710045DF09 /* PopupDialogDefaultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopupDialogDefaultViewController.swift; path = CapstoneProject/Sources/AlertView/PopupDialogDefaultViewController.swift; sourceTree = "<group>"; };
+		9C00D8751DCAAB710045DF09 /* PopupDialogOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopupDialogOverlayView.swift; path = CapstoneProject/Sources/AlertView/PopupDialogOverlayView.swift; sourceTree = "<group>"; };
+		9C00D8761DCAAB710045DF09 /* PresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PresentationController.swift; path = CapstoneProject/Sources/AlertView/PresentationController.swift; sourceTree = "<group>"; };
+		9C00D8771DCAAB710045DF09 /* PresentationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PresentationManager.swift; path = CapstoneProject/Sources/AlertView/PresentationManager.swift; sourceTree = "<group>"; };
+		9C00D8781DCAAB710045DF09 /* TransitionAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransitionAnimations.swift; path = CapstoneProject/Sources/AlertView/TransitionAnimations.swift; sourceTree = "<group>"; };
+		9C00D8791DCAAB710045DF09 /* TransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransitionAnimator.swift; path = CapstoneProject/Sources/AlertView/TransitionAnimator.swift; sourceTree = "<group>"; };
+		9C00D87A1DCAAB710045DF09 /* UIView+Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Animations.swift"; path = "CapstoneProject/Sources/AlertView/UIView+Animations.swift"; sourceTree = "<group>"; };
+		9C00D87B1DCAAB710045DF09 /* UIViewController+Visibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+Visibility.swift"; path = "CapstoneProject/Sources/AlertView/UIViewController+Visibility.swift"; sourceTree = "<group>"; };
+		9C00D88C1DCAB8BE0045DF09 /* ColorHarmoniesController + Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ColorHarmoniesController + Helper.swift"; path = "Sources/Color Harmonies/Controllers/ColorHarmoniesController + Helper.swift"; sourceTree = "<group>"; };
+		9C3359491DA7F7CE0022FDF6 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarController.swift; path = "Sources/Color Harmonies/Controllers/TabBarController.swift"; sourceTree = "<group>"; };
 		9C3577C61D9F2FB6008BCA9F /* Colorscope.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Colorscope.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C3577CE1D9F2FB6008BCA9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9C3577D01D9F2FB6008BCA9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9C3577D01D9F2FB6008BCA9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Resources/Assets.xcassets; sourceTree = "<group>"; };
 		9C3577D31D9F2FB6008BCA9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		9C3577D51D9F2FB6008BCA9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9C3577DC1D9F2FEC008BCA9F /* LayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutConstraint.swift; sourceTree = "<group>"; };
-		9C3577DE1D9F2FEC008BCA9F /* WalkthroughController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughController.swift; sourceTree = "<group>"; };
-		9C3577E11D9F2FEC008BCA9F /* PageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
-		9C3577E21D9F2FEC008BCA9F /* Dao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dao.swift; sourceTree = "<group>"; };
-		9C3577EC1D9F3001008BCA9F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9C3629F91DAC3F8E00AC93B2 /* DynamicColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicColor.swift; sourceTree = "<group>"; };
-		9C3C475F1DA55B56000AEC00 /* UserDefaults+helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+helpers.swift"; sourceTree = "<group>"; };
-		9C3C47611DA55DEE000AEC00 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
-		9C4B13141DB98C1600703F2A /* GothamRounded-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRounded-Book.otf"; sourceTree = "<group>"; };
-		9C5751C91DB9520F00CE3095 /* RandomColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomColor.swift; sourceTree = "<group>"; };
-		9C5751CA1DB9520F00CE3095 /* ColorDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorDefinition.swift; sourceTree = "<group>"; };
-		9C5751CB1DB9520F00CE3095 /* Luminosity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Luminosity.swift; sourceTree = "<group>"; };
-		9C5751CC1DB9520F00CE3095 /* Hue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hue.swift; sourceTree = "<group>"; };
-		9C5751D11DB9521700CE3095 /* HueExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HueExtension.swift; sourceTree = "<group>"; };
-		9C64ED601DAD5165005EDB58 /* ColorHarmony.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorHarmony.swift; sourceTree = "<group>"; };
-		9C724B701DA2E63900214D21 /* GetStartedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetStartedCell.swift; sourceTree = "<group>"; };
-		9C724B751DA30DFC00214D21 /* Stylesheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stylesheet.swift; sourceTree = "<group>"; };
-		9C7FCCD51DABEB6900A967A8 /* ColorHarmoniesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorHarmoniesController.swift; sourceTree = "<group>"; };
-		9C7FCCDA1DABEE3600A967A8 /* ComplementaryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComplementaryCell.swift; sourceTree = "<group>"; };
-		9C85E6661DAE9C2700A3034B /* AnalogousCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalogousCell.swift; sourceTree = "<group>"; };
-		9C85E6681DAEA15F00A3034B /* TriadicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriadicCell.swift; sourceTree = "<group>"; };
-		9C85E66A1DAEA4BE00A3034B /* TetradicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TetradicCell.swift; sourceTree = "<group>"; };
-		9C8B02C61DB5DE9B0037128B /* DynamicColor+Deriving.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DynamicColor+Deriving.swift"; sourceTree = "<group>"; };
-		9C8B02C71DB5DE9B0037128B /* DynamicColor+HSB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DynamicColor+HSB.swift"; sourceTree = "<group>"; };
-		9C8B02C81DB5DE9B0037128B /* DynamicColor+HSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DynamicColor+HSL.swift"; sourceTree = "<group>"; };
-		9C8B02CA1DB5DE9B0037128B /* DynamicColor+Mixing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DynamicColor+Mixing.swift"; sourceTree = "<group>"; };
-		9C8B02CB1DB5DE9B0037128B /* DynamicColor+RGBA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DynamicColor+RGBA.swift"; sourceTree = "<group>"; };
-		9C8B02CD1DB5DE9B0037128B /* DynamicColorSpace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicColorSpace.swift; sourceTree = "<group>"; };
-		9C8B02CF1DB5DE9B0037128B /* HSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSL.swift; sourceTree = "<group>"; };
-		9C8B02D01DB5DE9B0037128B /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		9C91D26C1DB7881000B9B157 /* GothamRounded-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRounded-Bold.otf"; sourceTree = "<group>"; };
-		9C91D26E1DB7881D00B9B157 /* GothamRounded-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRounded-Medium.otf"; sourceTree = "<group>"; };
-		9C9798DC1DC6890100DD390D /* HarmonyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HarmonyCell.swift; sourceTree = "<group>"; };
-		9CAC84AF1DA43CA200C20D4F /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
-		9CB3A4571DB5206500E236DA /* WalkthroughPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughPage.swift; sourceTree = "<group>"; };
-		9CB3A4591DB5213D00E236DA /* WalkthroughPageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughPageCell.swift; sourceTree = "<group>"; };
-		9CB3A45B1DB5236100E236DA /* TutorialController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialController.swift; sourceTree = "<group>"; };
-		9CC2DF7C1DB5D4960013818D /* Tint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tint.swift; sourceTree = "<group>"; };
-		9CC2DF7E1DB5D66D0013818D /* TintCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TintCell.swift; sourceTree = "<group>"; };
-		9CDB10E91DCBA2C3006DC7E2 /* ClipboardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClipboardCell.swift; sourceTree = "<group>"; };
-		9CE5E9321DD25F6D006242EB /* DynamicColor+XYZ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DynamicColor+XYZ.swift"; sourceTree = "<group>"; };
-		9CE5E9341DD25F74006242EB /* DynamicColor+Lab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DynamicColor+Lab.swift"; sourceTree = "<group>"; };
-		9CE5E9361DD26050006242EB /* SWColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWColor.swift; sourceTree = "<group>"; };
-		9CEC6B5B1DC7D80000C20156 /* WelcomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeCell.swift; sourceTree = "<group>"; };
-		9CEC6B5D1DC7DDFB00C20156 /* SelectedColorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedColorCell.swift; sourceTree = "<group>"; };
+		9C3577D51D9F2FB6008BCA9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Supporting Files/Info.plist"; sourceTree = "<group>"; };
+		9C3577DC1D9F2FEC008BCA9F /* LayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LayoutConstraint.swift; path = Sources/Utils/LayoutConstraint.swift; sourceTree = "<group>"; };
+		9C3577DE1D9F2FEC008BCA9F /* WalkthroughController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WalkthroughController.swift; path = Sources/Walkthrough/Controllers/WalkthroughController.swift; sourceTree = "<group>"; };
+		9C3577E11D9F2FEC008BCA9F /* PageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageCell.swift; path = Sources/Walkthrough/Views/PageCell.swift; sourceTree = "<group>"; };
+		9C3577E21D9F2FEC008BCA9F /* Dao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Dao.swift; path = Sources/Utils/Dao.swift; sourceTree = "<group>"; };
+		9C3577EC1D9F3001008BCA9F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Sources/AppDelegate.swift; sourceTree = "<group>"; };
+		9C3629F91DAC3F8E00AC93B2 /* DynamicColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicColor.swift; path = "Sources/Color/Dynamic Color/DynamicColor.swift"; sourceTree = "<group>"; };
+		9C3C475F1DA55B56000AEC00 /* UserDefaults+helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UserDefaults+helpers.swift"; path = "Sources/Utils/UserDefaults+helpers.swift"; sourceTree = "<group>"; };
+		9C3C47611DA55DEE000AEC00 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeController.swift; path = Sources/Home/Controller/HomeController.swift; sourceTree = "<group>"; };
+		9C4B13141DB98C1600703F2A /* GothamRounded-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GothamRounded-Book.otf"; path = "Supporting Files/Font/GothamRounded-Book.otf"; sourceTree = "<group>"; };
+		9C4EEC861EB7723B00FC98CA /* Colorscope-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Colorscope-Bridging-Header.h"; sourceTree = "<group>"; };
+		9C4EEC871EB7723B00FC98CA /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FXBlurView.h; path = CapstoneProject/Sources/AlertView/FXBlurView.h; sourceTree = "<group>"; };
+		9C4EEC881EB7723B00FC98CA /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FXBlurView.m; path = CapstoneProject/Sources/AlertView/FXBlurView.m; sourceTree = "<group>"; };
+		9C5751C91DB9520F00CE3095 /* RandomColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RandomColor.swift; path = "Sources/Color/Random Color/RandomColor.swift"; sourceTree = "<group>"; };
+		9C5751CA1DB9520F00CE3095 /* ColorDefinition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorDefinition.swift; path = "Sources/Color/Random Color/ColorDefinition.swift"; sourceTree = "<group>"; };
+		9C5751CB1DB9520F00CE3095 /* Luminosity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Luminosity.swift; path = "Sources/Color/Random Color/Luminosity.swift"; sourceTree = "<group>"; };
+		9C5751CC1DB9520F00CE3095 /* Hue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hue.swift; path = "Sources/Color/Random Color/Hue.swift"; sourceTree = "<group>"; };
+		9C5751D11DB9521700CE3095 /* HueExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HueExtension.swift; path = "Sources/Color/Random Color/HueExtension.swift"; sourceTree = "<group>"; };
+		9C64ED601DAD5165005EDB58 /* ColorHarmony.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorHarmony.swift; path = "Sources/Color Harmonies/Models.swift/ColorHarmony.swift"; sourceTree = "<group>"; };
+		9C724B701DA2E63900214D21 /* GetStartedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetStartedCell.swift; path = Sources/Walkthrough/Views/GetStartedCell.swift; sourceTree = "<group>"; };
+		9C724B751DA30DFC00214D21 /* Stylesheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Stylesheet.swift; path = Sources/Utils/Stylesheet.swift; sourceTree = "<group>"; };
+		9C7FCCD51DABEB6900A967A8 /* ColorHarmoniesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorHarmoniesController.swift; path = "Sources/Color Harmonies/Controllers/ColorHarmoniesController.swift"; sourceTree = "<group>"; };
+		9C7FCCDA1DABEE3600A967A8 /* ComplementaryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ComplementaryCell.swift; path = "Sources/Color Harmonies/Views/ComplementaryCell.swift"; sourceTree = "<group>"; };
+		9C85E6661DAE9C2700A3034B /* AnalogousCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnalogousCell.swift; path = "Sources/Color Harmonies/Views/AnalogousCell.swift"; sourceTree = "<group>"; };
+		9C85E6681DAEA15F00A3034B /* TriadicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TriadicCell.swift; path = "Sources/Color Harmonies/Views/TriadicCell.swift"; sourceTree = "<group>"; };
+		9C85E66A1DAEA4BE00A3034B /* TetradicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TetradicCell.swift; path = "Sources/Color Harmonies/Views/TetradicCell.swift"; sourceTree = "<group>"; };
+		9C8B02C61DB5DE9B0037128B /* DynamicColor+Deriving.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DynamicColor+Deriving.swift"; path = "Sources/Color/Dynamic Color/DynamicColor+Deriving.swift"; sourceTree = "<group>"; };
+		9C8B02C71DB5DE9B0037128B /* DynamicColor+HSB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DynamicColor+HSB.swift"; path = "Sources/Color/Dynamic Color/DynamicColor+HSB.swift"; sourceTree = "<group>"; };
+		9C8B02C81DB5DE9B0037128B /* DynamicColor+HSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DynamicColor+HSL.swift"; path = "Sources/Color/Dynamic Color/DynamicColor+HSL.swift"; sourceTree = "<group>"; };
+		9C8B02CA1DB5DE9B0037128B /* DynamicColor+Mixing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DynamicColor+Mixing.swift"; path = "Sources/Color/Dynamic Color/DynamicColor+Mixing.swift"; sourceTree = "<group>"; };
+		9C8B02CB1DB5DE9B0037128B /* DynamicColor+RGBA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DynamicColor+RGBA.swift"; path = "Sources/Color/Dynamic Color/DynamicColor+RGBA.swift"; sourceTree = "<group>"; };
+		9C8B02CD1DB5DE9B0037128B /* DynamicColorSpace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DynamicColorSpace.swift; path = "Sources/Color/Dynamic Color/DynamicColorSpace.swift"; sourceTree = "<group>"; };
+		9C8B02CF1DB5DE9B0037128B /* HSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HSL.swift; path = "Sources/Color/Dynamic Color/HSL.swift"; sourceTree = "<group>"; };
+		9C8B02D01DB5DE9B0037128B /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = "Sources/Color/Dynamic Color/Utils.swift"; sourceTree = "<group>"; };
+		9C91D26C1DB7881000B9B157 /* GothamRounded-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GothamRounded-Bold.otf"; path = "Supporting Files/Font/GothamRounded-Bold.otf"; sourceTree = "<group>"; };
+		9C91D26E1DB7881D00B9B157 /* GothamRounded-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GothamRounded-Medium.otf"; path = "Supporting Files/Font/GothamRounded-Medium.otf"; sourceTree = "<group>"; };
+		9C9798DC1DC6890100DD390D /* HarmonyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HarmonyCell.swift; path = Sources/Walkthrough/Views/HarmonyCell.swift; sourceTree = "<group>"; };
+		9CAC84AF1DA43CA200C20D4F /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainNavigationController.swift; path = Sources/Walkthrough/Controllers/MainNavigationController.swift; sourceTree = "<group>"; };
+		9CB3A4571DB5206500E236DA /* WalkthroughPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WalkthroughPage.swift; path = "Sources/Color Harmonies/Models.swift/WalkthroughPage.swift"; sourceTree = "<group>"; };
+		9CB3A4591DB5213D00E236DA /* WalkthroughPageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WalkthroughPageCell.swift; path = "Sources/Color Harmonies/Views/WalkthroughPageCell.swift"; sourceTree = "<group>"; };
+		9CB3A45B1DB5236100E236DA /* TutorialController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TutorialController.swift; path = "Sources/Color Harmonies/Controllers/TutorialController.swift"; sourceTree = "<group>"; };
+		9CC2DF7C1DB5D4960013818D /* Tint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tint.swift; path = Sources/Home/Model/Tint.swift; sourceTree = "<group>"; };
+		9CC2DF7E1DB5D66D0013818D /* TintCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TintCell.swift; path = Sources/Home/View/TintCell.swift; sourceTree = "<group>"; };
+		9CDB10E91DCBA2C3006DC7E2 /* ClipboardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ClipboardCell.swift; path = Sources/Walkthrough/Views/ClipboardCell.swift; sourceTree = "<group>"; };
+		9CE5E9321DD25F6D006242EB /* DynamicColor+XYZ.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DynamicColor+XYZ.swift"; path = "Sources/Color/Dynamic Color/DynamicColor+XYZ.swift"; sourceTree = "<group>"; };
+		9CE5E9341DD25F74006242EB /* DynamicColor+Lab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DynamicColor+Lab.swift"; path = "Sources/Color/Dynamic Color/DynamicColor+Lab.swift"; sourceTree = "<group>"; };
+		9CE5E9361DD26050006242EB /* SWColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SWColor.swift; path = "Sources/Color/Dynamic Color/SWColor.swift"; sourceTree = "<group>"; };
+		9CEC6B5B1DC7D80000C20156 /* WelcomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeCell.swift; path = Sources/Walkthrough/Views/WelcomeCell.swift; sourceTree = "<group>"; };
+		9CEC6B5D1DC7DDFB00C20156 /* SelectedColorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectedColorCell.swift; path = Sources/Walkthrough/Views/SelectedColorCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,8 +160,8 @@
 		9C00D8691DCAAAFE0045DF09 /* AlertView */ = {
 			isa = PBXGroup;
 			children = (
-				9C00D86B1DCAAB710045DF09 /* FXBlurView.h */,
-				9C00D86C1DCAAB710045DF09 /* FXBlurView.m */,
+				9C4EEC871EB7723B00FC98CA /* FXBlurView.h */,
+				9C4EEC881EB7723B00FC98CA /* FXBlurView.m */,
 				9C00D86D1DCAAB710045DF09 /* InteractiveTransition.swift */,
 				9C00D86E1DCAAB710045DF09 /* PopupDialog.swift */,
 				9C00D8701DCAAB710045DF09 /* PopupDialogButton.swift */,
@@ -176,7 +176,7 @@
 				9C00D8791DCAAB710045DF09 /* TransitionAnimator.swift */,
 				9C00D87A1DCAAB710045DF09 /* UIView+Animations.swift */,
 				9C00D87B1DCAAB710045DF09 /* UIViewController+Visibility.swift */,
-				9C00D86A1DCAAB700045DF09 /* Colorscope-Bridging-Header.h */,
+				9C4EEC861EB7723B00FC98CA /* Colorscope-Bridging-Header.h */,
 			);
 			name = AlertView;
 			path = ..;
@@ -190,14 +190,14 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		9C3359441DA7F4240022FDF6 /* MainController */ = {
+		9C3359441DA7F4240022FDF6 /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				9C22B9B01DAA157D0047610E /* Model */,
 				9C3359481DA7F45B0022FDF6 /* Views */,
 				9C3359451DA7F43A0022FDF6 /* Controllers */,
 			);
-			name = MainController;
+			name = Home;
 			sourceTree = "<group>";
 		};
 		9C3359451DA7F43A0022FDF6 /* Controllers */ = {
@@ -237,7 +237,7 @@
 			children = (
 				9C3577EC1D9F3001008BCA9F /* AppDelegate.swift */,
 				9C9C36B41DA5A80500C24803 /* WalkthroughTutorial */,
-				9C3359441DA7F4240022FDF6 /* MainController */,
+				9C3359441DA7F4240022FDF6 /* Home */,
 				9C7FCCD71DABEDE100A967A8 /* Color Harmonies */,
 				9C8337F81D9F33760027C5AF /* Extensions */,
 				9C5751D31DB9562700CE3095 /* Color */,
@@ -426,7 +426,7 @@
 					9C3577C51D9F2FB5008BCA9F = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = Y9CEQN88G2;
-						LastSwiftMigration = 0810;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -478,7 +478,6 @@
 				9C85E6691DAEA15F00A3034B /* TriadicCell.swift in Sources */,
 				9C3C47601DA55B56000AEC00 /* UserDefaults+helpers.swift in Sources */,
 				9C00D8821DCAAB710045DF09 /* PopupDialogDefaultButtons.swift in Sources */,
-				9C00D87C1DCAAB710045DF09 /* FXBlurView.m in Sources */,
 				9C00D8871DCAAB710045DF09 /* PresentationManager.swift in Sources */,
 				9C724B761DA30DFC00214D21 /* Stylesheet.swift in Sources */,
 				9CEC6B5E1DC7DDFB00C20156 /* SelectedColorCell.swift in Sources */,
@@ -517,6 +516,7 @@
 				9CE5E9371DD26050006242EB /* SWColor.swift in Sources */,
 				9C3577E91D9F2FEC008BCA9F /* PageCell.swift in Sources */,
 				9CB3A45C1DB5236100E236DA /* TutorialController.swift in Sources */,
+				9C4EEC891EB7723B00FC98CA /* FXBlurView.m in Sources */,
 				9C8B02D61DB5DE9B0037128B /* DynamicColor+RGBA.swift in Sources */,
 				9CC2DF7F1DB5D66D0013818D /* TintCell.swift in Sources */,
 				9C85E66B1DAEA4BE00A3034B /* TetradicCell.swift in Sources */,
@@ -541,6 +541,7 @@
 				9C3577CE1D9F2FB6008BCA9F /* Base */,
 			);
 			name = Main.storyboard;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		9C3577D21D9F2FB6008BCA9F /* LaunchScreen.storyboard */ = {
@@ -549,6 +550,7 @@
 				9C3577D31D9F2FB6008BCA9F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -653,7 +655,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = Y9CEQN88G2;
-				INFOPLIST_FILE = CapstoneProject/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CapstoneProject/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jairoeli.CapstoneProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -669,7 +671,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = Y9CEQN88G2;
-				INFOPLIST_FILE = CapstoneProject/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CapstoneProject/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jairoeli.CapstoneProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";

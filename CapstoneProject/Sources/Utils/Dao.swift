@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol Dao {}
 extension NSObject: Dao {}
