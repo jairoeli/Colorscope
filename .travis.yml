@@ -32,3 +32,4 @@ script:
     -destination "$DESTINATION"
     -configuration Debug
     CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty -c
+  - bundle exec danger

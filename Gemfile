@@ -2,3 +2,6 @@
 source "https://rubygems.org"
 
 gem "cocoapods"
+
+# Danger
+gem "danger"
