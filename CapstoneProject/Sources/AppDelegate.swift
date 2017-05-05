@@ -17,7 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     window = UIWindow(frame: UIScreen.main.bounds)
     window?.makeKeyAndVisible()
-    window?.rootViewController = MainNavigationController()
+    window?.backgroundColor = .red
+    window?.rootViewController = UIViewController()
 
     Thread.sleep(forTimeInterval: 1.4)
     return true
