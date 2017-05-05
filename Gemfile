@@ -5,3 +5,4 @@ gem "cocoapods"
 
 # Danger
 gem "danger"
+gem 'danger-swiftlint'
