@@ -1,26 +1,19 @@
 disabled_rules: # rule identifiers to exclude from running
-- line_length
 - identifier_name
-- nesting
 - function_parameter_count
-- large_tuple
-- cyclomatic_complexity
-- todo
-- control_statement
-- implicit_getter
-- shorthand_operator
 
 opt_in_rules: # some rules are only opt-in
+- control_statement
 - empty_count
 - trailing_newline
 - colon
 - comma
 
+included: # paths to include during linting. `--path` is ignored if present.
+- CapstoneProject
+
 excluded: # paths to ignore during linting. Takes precedence over `included`.
-- Carthage
 - Pods
-- Source/ExcludedFolder
-- Source/ExcludedFile.swift
 
 # configurable rules can be customized from this configuration file
 # binary rules can set their severity level
@@ -28,16 +21,14 @@ force_cast: warning # implicitly
 
 force_try:
   severity: warning # explicitly
+  
+line_length: 150
 
 # they can set both implicitly with an array
 type_body_length:
 - 300 # warning
 - 400 # error
 
-function_body_length:
-- 100 # warning
-
-# or they can set both explicitly
 file_length:
-warning: 500
-error: 800
+  warning: 500
+  error: 800

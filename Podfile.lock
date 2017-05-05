@@ -1,0 +1,15 @@
+PODS:
+  - EasyPeasy (1.4.2)
+  - ReusableKit (1.1.0)
+
+DEPENDENCIES:
+  - EasyPeasy
+  - ReusableKit
+
+SPEC CHECKSUMS:
+  EasyPeasy: 50e7130b61f495ce105796e438d4136e2c8d2cc0
+  ReusableKit: 89e743a120bab0d95848bff27e481833c2768905
+
+PODFILE CHECKSUM: b3323414c7fed8c9e0819096f35b02d2f4c615db
+
+COCOAPODS: 1.2.1
