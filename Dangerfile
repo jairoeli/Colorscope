@@ -28,10 +28,3 @@ warn("Please, provide a description to your PR 📝") if github.pr_body.length <
 if git.modified_files.empty? && git.added_files.empty? && git.deleted_files.empty?
   fail "This PR has no changes at all, this is likely an issue during development. 🙊"
 end
-
-# This is swiftlint plugin. More info: https://github.com/ashfurrow/danger-swiftlint
-#
-# This lints all Swift files and leave comments in PR if 
-# there is any issue with linting
-swiftlint.lint_files
-swiftlint.lint_files inline_mode: true
