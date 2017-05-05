@@ -10,7 +10,7 @@ cache:
 env:
   global:
     - WORKSPACE="Colorscope.xcworkspace"
-    - SCHEME="Colorscope"
+    - SCHEME="CapstoneProject"
     - IOS_SDK="iphonesimulator10.3"
   matrix:
     - SDK="$IOS_SDK"  DESTINATION="platform=iOS Simulator,name=iPhone 7,OS=10.3"
