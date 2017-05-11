@@ -18,7 +18,7 @@ final public class PopupDialog: UIViewController {
     fileprivate var initialized = false
 
     /// The completion handler
-    fileprivate var completion: (() -> Void)? = nil
+    fileprivate var completion: (() -> Void)?
 
     /// The custom transition presentation manager
     fileprivate var presentationManager: PresentationManager!
@@ -31,6 +31,7 @@ final public class PopupDialog: UIViewController {
     /// Returns the controllers view
     internal var popupContainerView: PopupDialogContainerView {
         return view as! PopupDialogContainerView
+      // swiftlint:disable:previous force_cast
     }
 
     /// The set of buttons
@@ -40,7 +41,7 @@ final public class PopupDialog: UIViewController {
     internal var keyboardShown = false
 
     /// Keyboard height
-    internal var keyboardHeight: CGFloat? = nil
+    internal var keyboardHeight: CGFloat?
 
     // MARK: Public
 
@@ -219,7 +220,7 @@ final public class PopupDialog: UIViewController {
     /// Calls the action closure of the button instance tapped
     @objc fileprivate func buttonTapped(_ button: PopupDialogButton) {
         if button.dismissOnTap {
-            dismiss() { button.buttonAction?() }
+            dismiss { button.buttonAction?() }
         } else {
             button.buttonAction?()
         }

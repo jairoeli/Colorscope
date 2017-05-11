@@ -25,13 +25,13 @@ final internal class PresentationController: UIPresentationController {
         overlay.frame = containerView!.bounds
         containerView!.insertSubview(overlay, at: 0)
 
-        presentedViewController.transitionCoordinator?.animate(alongsideTransition: { (coordinatorContext) -> Void in
+        presentedViewController.transitionCoordinator?.animate(alongsideTransition: { (_) -> Void in
             self.overlay.alpha = 1.0
         }, completion: nil)
     }
 
     override func dismissalTransitionWillBegin() {
-        presentedViewController.transitionCoordinator?.animate(alongsideTransition: { (coordinatorContext) -> Void in
+        presentedViewController.transitionCoordinator?.animate(alongsideTransition: { (_) -> Void in
             self.overlay.alpha = 0.0
         }, completion: nil)
     }

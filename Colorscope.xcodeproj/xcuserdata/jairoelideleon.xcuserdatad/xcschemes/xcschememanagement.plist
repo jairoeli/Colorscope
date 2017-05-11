@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>CapstoneProject.xcscheme_^#shared#^_</key>
+		<key>Colorscope.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -13,11 +13,6 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>9C3577C51D9F2FB5008BCA9F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9C96D7141EBCDEB1004BF5FB</key>
 		<dict>
 			<key>primary</key>
 			<true/>

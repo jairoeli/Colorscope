@@ -9,7 +9,7 @@
 import Foundation
 
 public enum Hue {
-    
+
     case monochrome, red, orange, yellow, green, blue, purple, pink
     case value(Int)
     case random
