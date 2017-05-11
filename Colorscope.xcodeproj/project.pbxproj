@@ -150,9 +150,12 @@
 				9C3577C21D9F2FB5008BCA9F /* Sources */,
 				9C3577C31D9F2FB5008BCA9F /* Frameworks */,
 				9C3577C41D9F2FB5008BCA9F /* Resources */,
+<<<<<<< HEAD
 				9C8A72C91EB7931A00B0501C /* Swiftlint */,
 				810D326F2E542F5A9EC94CC8 /* [CP] Embed Pods Frameworks */,
 				479FDD849DE2C63987F859A8 /* [CP] Copy Pods Resources */,
+=======
+>>>>>>> parent of b202eab... Add SwiftLint
 			);
 			buildRules = (
 			);
@@ -246,6 +249,7 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+<<<<<<< HEAD
 /* Begin PBXShellScriptBuildPhase section */
 		479FDD849DE2C63987F859A8 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -308,6 +312,8 @@
 		};
 /* End PBXShellScriptBuildPhase section */
 
+=======
+>>>>>>> parent of b202eab... Add SwiftLint
 /* Begin PBXSourcesBuildPhase section */
 		9C3577C21D9F2FB5008BCA9F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
