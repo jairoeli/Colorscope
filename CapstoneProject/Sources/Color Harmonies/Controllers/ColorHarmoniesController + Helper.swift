@@ -44,7 +44,7 @@ extension ColorHarmoniesController {
 
   // MARK: - Handle Action
 
-  func handleCopying() {
+  @objc func handleCopying() {
     let indexPath = collectionView.indexPathsForVisibleItems[0]
 
     switch indexPath.item {
