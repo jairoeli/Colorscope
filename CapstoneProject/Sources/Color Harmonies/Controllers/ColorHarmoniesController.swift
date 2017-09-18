@@ -90,11 +90,11 @@ class ColorHarmoniesController: UIViewController, UICollectionViewDelegate, UICo
   }
 
   // MARK: - Handle Actions
-  func handleDismiss() {
+  @objc func handleDismiss() {
     _ = navigationController?.popViewController(animated: true)
   }
 
-  func handleInfo() {
+  @objc func handleInfo() {
     let controller = TutorialController()
     navigationController?.present(controller, animated: true, completion: nil)
   }

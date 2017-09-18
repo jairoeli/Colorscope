@@ -38,7 +38,7 @@ class TutorialController: UIViewController, UICollectionViewDelegate, UICollecti
     $0.tintColor = Eden.Independence.color
   }
 
-  func handleDismiss() {
+  @objc func handleDismiss() {
     dismiss(animated: true, completion: nil)
   }
 
