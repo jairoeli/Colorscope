@@ -29,7 +29,7 @@ class MainNavigationController: UINavigationController {
     return UserDefaults.standard.isLoggedIn()
   }
 
-  func showLoginController() {
+  @objc func showLoginController() {
     let loginController = WalkthroughController()
 
     present(loginController, animated: true, completion: {

@@ -85,7 +85,7 @@ class HomeController: UIViewController, UICollectionViewDelegate, UICollectionVi
     self.view.addGestureRecognizer(swipeRight)
   }
 
-  func popViewController(gesture: UIGestureRecognizer) {
+  @objc func popViewController(gesture: UIGestureRecognizer) {
     if let swipeGesture = gesture as? UISwipeGestureRecognizer {
       switch swipeGesture.direction {
       case UISwipeGestureRecognizerDirection.right:
@@ -98,7 +98,7 @@ class HomeController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
   // MARK: - SignOut
 
-  func handleSignOut() {
+  @objc func handleSignOut() {
     UserDefaults.standard.setIsLoggedIn(value: false)
 
     let loginController = WalkthroughController()
@@ -112,7 +112,7 @@ class HomeController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
   }
 
-  func handleGenerate() {
+  @objc func handleGenerate() {
     let random = randomColor(hue: .random, luminosity: .random)
 
     let currentColor = Tint(hexLabel: random.toHexString(),

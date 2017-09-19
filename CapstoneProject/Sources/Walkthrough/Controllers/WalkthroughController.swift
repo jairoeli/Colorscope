@@ -103,7 +103,7 @@ class WalkthroughController: UIViewController, UICollectionViewDelegate, UIColle
 
   // MARK: Action
 
-  func nextPage() {
+  @objc func nextPage() {
     // we are on the last page
     if pageControl.currentPage == 5 {
       return
@@ -123,7 +123,7 @@ class WalkthroughController: UIViewController, UICollectionViewDelegate, UIColle
     pageControl.currentPage += 1
   }
 
-  func skip() {
+  @objc func skip() {
     pageControl.currentPage = 5 - 1
     nextPage()
   }

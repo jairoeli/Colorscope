@@ -64,7 +64,7 @@ class GetStartedCell: UICollectionViewCell {
   }
 
   // MARK: Action
-  func handleLogin() {
+  @objc func handleLogin() {
     delegate?.finishLoggingIn()
   }
 
