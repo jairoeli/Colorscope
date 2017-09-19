@@ -72,9 +72,12 @@
 		9CE5E9371DD26050006242EB /* SWColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE5E9361DD26050006242EB /* SWColor.swift */; };
 		9CEC6B5C1DC7D80000C20156 /* WelcomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEC6B5B1DC7D80000C20156 /* WelcomeCell.swift */; };
 		9CEC6B5E1DC7DDFB00C20156 /* SelectedColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEC6B5D1DC7DDFB00C20156 /* SelectedColorCell.swift */; };
+		B9B9DD1020D016D8A427B5FB /* Pods_Colorscope.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4247BFC9D26E1480CD0AA40 /* Pods_Colorscope.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0CD4B1AE1B4F95646875E32F /* Pods-Colorscope.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Colorscope.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Colorscope/Pods-Colorscope.debug.xcconfig"; sourceTree = "<group>"; };
+		973A102258D99D1D27E61F01 /* Pods-Colorscope.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Colorscope.release.xcconfig"; path = "Pods/Target Support Files/Pods-Colorscope/Pods-Colorscope.release.xcconfig"; sourceTree = "<group>"; };
 		9C00D86D1DCAAB710045DF09 /* InteractiveTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InteractiveTransition.swift; path = CapstoneProject/Sources/AlertView/InteractiveTransition.swift; sourceTree = "<group>"; };
 		9C00D86E1DCAAB710045DF09 /* PopupDialog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopupDialog.swift; path = CapstoneProject/Sources/AlertView/PopupDialog.swift; sourceTree = "<group>"; };
 		9C00D8701DCAAB710045DF09 /* PopupDialogButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopupDialogButton.swift; path = CapstoneProject/Sources/AlertView/PopupDialogButton.swift; sourceTree = "<group>"; };
@@ -144,6 +147,7 @@
 		9CE5E9361DD26050006242EB /* SWColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SWColor.swift; path = "Sources/Color/Dynamic Color/SWColor.swift"; sourceTree = "<group>"; };
 		9CEC6B5B1DC7D80000C20156 /* WelcomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeCell.swift; path = Sources/Walkthrough/Views/WelcomeCell.swift; sourceTree = "<group>"; };
 		9CEC6B5D1DC7DDFB00C20156 /* SelectedColorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectedColorCell.swift; path = Sources/Walkthrough/Views/SelectedColorCell.swift; sourceTree = "<group>"; };
+		B4247BFC9D26E1480CD0AA40 /* Pods_Colorscope.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Colorscope.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,12 +155,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9B9DD1020D016D8A427B5FB /* Pods_Colorscope.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D5AE980A99B4F0773AA5B9B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B4247BFC9D26E1480CD0AA40 /* Pods_Colorscope.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6F4A9C01F9707DF538103DFF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0CD4B1AE1B4F95646875E32F /* Pods-Colorscope.debug.xcconfig */,
+				973A102258D99D1D27E61F01 /* Pods-Colorscope.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9C00D8691DCAAAFE0045DF09 /* AlertView */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +243,8 @@
 			children = (
 				9C3577C81D9F2FB6008BCA9F /* CapstoneProject */,
 				9C3577C71D9F2FB6008BCA9F /* Products */,
+				6F4A9C01F9707DF538103DFF /* Pods */,
+				0D5AE980A99B4F0773AA5B9B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -400,9 +424,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9C3577D81D9F2FB6008BCA9F /* Build configuration list for PBXNativeTarget "Colorscope" */;
 			buildPhases = (
+				4FB3649FC435B94B6D575C99 /* [CP] Check Pods Manifest.lock */,
 				9C3577C21D9F2FB5008BCA9F /* Sources */,
 				9C3577C31D9F2FB5008BCA9F /* Frameworks */,
 				9C3577C41D9F2FB5008BCA9F /* Resources */,
+				920B04AB98793CEC293FE05C /* [CP] Embed Pods Frameworks */,
+				1ECF6D00BF2C11D737E5255F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -464,6 +491,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1ECF6D00BF2C11D737E5255F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Colorscope/Pods-Colorscope-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4FB3649FC435B94B6D575C99 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Colorscope-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		920B04AB98793CEC293FE05C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Colorscope/Pods-Colorscope-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Colorscope/Pods-Colorscope-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9C3577C21D9F2FB5008BCA9F /* Sources */ = {
@@ -663,10 +744,12 @@
 		};
 		9C3577D91D9F2FB6008BCA9F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0CD4B1AE1B4F95646875E32F /* Pods-Colorscope.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = Y9CEQN88G2;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/CapstoneProject/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jairoeli.CapstoneProject;
@@ -680,10 +763,12 @@
 		};
 		9C3577DA1D9F2FB6008BCA9F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 973A102258D99D1D27E61F01 /* Pods-Colorscope.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = Y9CEQN88G2;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/CapstoneProject/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jairoeli.CapstoneProject;
