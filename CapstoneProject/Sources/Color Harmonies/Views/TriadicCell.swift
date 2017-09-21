@@ -111,22 +111,43 @@ class TriadicCell: UICollectionViewCell {
     addSubview(triadicLabel2)
     addSubview(triadicLabel3)
 
-    _ = clearBackground.anchor(top: topAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 200)
+    self.clearBackground.snp.makeConstraints { make in
+      make.top.left.right.equalToSuperview()
+      make.height.equalTo(200)
+    }
 
-    _ = triadicBackgroundColor.anchor(top: clearBackground.bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: (frame.height - 200) / 3)
+    self.triadicBackgroundColor.snp.makeConstraints { make in
+      make.top.equalTo(self.clearBackground.snp.bottom)
+      make.left.right.equalToSuperview()
+      make.height.equalTo((frame.height - 200) / 3)
+    }
 
-    _ = triadicLabel.anchor(top: triadicBackgroundColor.centerYAnchor, left: nil, bottom: nil, right: nil, topConstant: -20, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
-    triadicLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+    self.triadicLabel.snp.makeConstraints { make in
+      make.top.equalTo(self.triadicBackgroundColor.snp.centerY).offset(-20)
+      make.centerX.equalToSuperview()
+    }
 
-    _ = triadicBackgroundColor2.anchor(top: triadicBackgroundColor.bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: (frame.height - 200) / 3)
+    self.triadicBackgroundColor2.snp.makeConstraints { make in
+      make.top.equalTo(self.triadicBackgroundColor.snp.bottom)
+      make.left.right.equalToSuperview()
+      make.height.equalTo((frame.height - 200) / 3)
+    }
 
-    _ = triadicLabel2.anchor(top: triadicBackgroundColor2.centerYAnchor, left: nil, bottom: nil, right: nil, topConstant: -20, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
-    triadicLabel2.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+    self.triadicLabel2.snp.makeConstraints { make in
+      make.top.equalTo(self.triadicBackgroundColor2.snp.centerY).offset(-20)
+      make.centerX.equalToSuperview()
+    }
 
-    _ = triadicBackgroundColor3.anchor(top: triadicBackgroundColor2.bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: (frame.height - 200) / 3)
+    self.triadicBackgroundColor3.snp.makeConstraints { make in
+      make.top.equalTo(self.triadicBackgroundColor2.snp.bottom)
+      make.left.right.equalToSuperview()
+      make.height.equalTo((frame.height - 200) / 3)
+    }
 
-    _ = triadicLabel3.anchor(top: triadicBackgroundColor3.centerYAnchor, left: nil, bottom: nil, right: nil, topConstant: -20, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
-    triadicLabel3.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+    self.triadicLabel3.snp.makeConstraints { make in
+      make.top.equalTo(self.triadicBackgroundColor3.snp.centerY).offset(-20)
+      make.centerX.equalToSuperview()
+    }
 
   }
 

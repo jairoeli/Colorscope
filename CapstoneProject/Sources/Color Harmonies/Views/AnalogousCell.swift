@@ -111,22 +111,43 @@ class AnalogousCell: UICollectionViewCell {
     addSubview(analogousLabel2)
     addSubview(analogousLabel3)
 
-    _ = clearBackground.anchor(top: topAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 200)
+    self.clearBackground.snp.makeConstraints { make in
+      make.top.left.right.equalToSuperview()
+      make.height.equalTo(200)
+    }
 
-    _ = analogousBackgroundColor.anchor(top: clearBackground.bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: (frame.height - 200) / 3)
+    self.analogousBackgroundColor.snp.makeConstraints { make in
+      make.top.equalTo(self.clearBackground.snp.bottom)
+      make.left.right.equalToSuperview()
+      make.height.equalTo((frame.height - 200) / 3)
+    }
 
-    _ = analogousLabel.anchor(top: analogousBackgroundColor.centerYAnchor, left: nil, bottom: nil, right: nil, topConstant: -20, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
-    analogousLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+    self.analogousLabel.snp.makeConstraints { make in
+      make.top.equalTo(self.analogousBackgroundColor.snp.centerY).offset(-20)
+      make.centerX.equalToSuperview()
+    }
 
-    _ = analogousBackgroundColor1.anchor(top: analogousBackgroundColor.bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: (frame.height - 200) / 3)
+    self.analogousBackgroundColor1.snp.makeConstraints { make in
+      make.top.equalTo(self.analogousBackgroundColor.snp.bottom)
+      make.left.right.equalToSuperview()
+      make.height.equalTo((frame.height - 200) / 3)
+    }
 
-    _ = analogousLabel2.anchor(top: analogousBackgroundColor1.centerYAnchor, left: nil, bottom: nil, right: nil, topConstant: -20, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
-    analogousLabel2.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+    self.analogousLabel2.snp.makeConstraints { make in
+      make.top.equalTo(self.analogousBackgroundColor1.snp.centerY).offset(-20)
+      make.centerX.equalToSuperview()
+    }
 
-    _ = analogousBackgroundColor2.anchor(top: analogousBackgroundColor1.bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: (frame.height - 200) / 3)
+    self.analogousBackgroundColor2.snp.makeConstraints { make in
+      make.top.equalTo(self.analogousBackgroundColor1.snp.bottom)
+      make.left.right.equalToSuperview()
+      make.height.equalTo((frame.height - 200) / 3)
+    }
 
-    _ = analogousLabel3.anchor(top: analogousBackgroundColor2.centerYAnchor, left: nil, bottom: nil, right: nil, topConstant: -20, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
-    analogousLabel3.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+    self.analogousLabel3.snp.makeConstraints { make in
+      make.top.equalTo(self.analogousBackgroundColor2.snp.centerY).offset(-20)
+      make.centerX.equalToSuperview()
+    }
 
   }
 
