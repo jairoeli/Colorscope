@@ -45,3 +45,8 @@ func spring(duration: TimeInterval, animations: (() -> Void)!) {
     }, completion: nil)
 
 }
+
+ func iPhoneX() -> Bool {
+  let screenRect: CGRect = UIScreen.main.bounds
+  return max(screenRect.size.height, screenRect.size.width) == 812
+}

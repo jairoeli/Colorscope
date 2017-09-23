@@ -96,7 +96,7 @@ class ComplementaryCell: UICollectionViewCell {
     }
 
     self.mainKeyColor.snp.makeConstraints { make in
-      make.top.equalTo(self.clearBackground.snp.bottom)
+      make.top.equalTo(clearBackground.snp.bottom)
       make.left.right.equalToSuperview()
       make.height.equalTo((frame.height - 200) / 2)
     }

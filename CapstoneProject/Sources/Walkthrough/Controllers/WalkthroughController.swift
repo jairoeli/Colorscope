@@ -77,11 +77,24 @@ class WalkthroughController: UIViewController, UICollectionViewDelegate, UIColle
     view.addSubview(skipButton)
     view.addSubview(nextButton)
 
-    pageControlBottomAnchor = pageControl.anchor(top: nil, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 40)[1]
+    if #available(iOS 11.0, *) {
+      pageControlBottomAnchor = pageControl.anchor(top: nil, left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 40)[1]
+    } else {
+      // Fallback on earlier versions
+      pageControlBottomAnchor = pageControl.anchor(top: nil, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 40)[1]
+    }
 
-    skipButtonTopAnchor = skipButton.anchor(top: nil, left: nil, bottom: view.bottomAnchor, right: nil, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 60, heightConstant: 40).first
+    if #available(iOS 11.0, *) {
+      skipButtonTopAnchor = skipButton.anchor(top: nil, left: nil, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: nil, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 60, heightConstant: 40).first
+    } else {
+      skipButtonTopAnchor = skipButton.anchor(top: nil, left: nil, bottom: view.bottomAnchor, right: nil, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 60, heightConstant: 40).first
+    }
 
-    nextButtonTopAnchor = nextButton.anchor(top: nil, left: nil, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 60, heightConstant: 40).first
+    if #available(iOS 11.0, *) {
+      nextButtonTopAnchor = nextButton.anchor(top: nil, left: nil, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 60, heightConstant: 40).first
+    } else {
+      nextButtonTopAnchor = nextButton.anchor(top: nil, left: nil, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 60, heightConstant: 40).first
+    }
 
     // use auto layout
     collectionView.anchorToTop(top: view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor)
@@ -131,9 +144,9 @@ class WalkthroughController: UIViewController, UICollectionViewDelegate, UIColle
   // MARK: Refactor code
 
   fileprivate func moveControlConstraintsOffScreen() {
-    pageControlBottomAnchor?.constant = 40
-    skipButtonTopAnchor?.constant = 40
-    nextButtonTopAnchor?.constant = 40
+    pageControlBottomAnchor?.constant = 60
+    skipButtonTopAnchor?.constant = 60
+    nextButtonTopAnchor?.constant = 60
   }
 
   // MARK: Scroll

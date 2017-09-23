@@ -57,7 +57,12 @@ class WelcomeCell: UICollectionViewCell {
 
     textView.anchorWithConstantsToTop(top: lineSeperatorView.bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 8, leftConstant: 16, bottomConstant: 0, rightConstant: 16)
 
-    paragraphView.anchorWithConstantsToTop(top: textView.bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 14, leftConstant: 32, bottomConstant: 0, rightConstant: 32)
+    if #available(iOS 11.0, *) {
+      paragraphView.anchorWithConstantsToTop(top: textView.safeAreaLayoutGuide.bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 14, leftConstant: 32, bottomConstant: 0, rightConstant: 32)
+    } else {
+      // Fallback on earlier versions
+      paragraphView.anchorWithConstantsToTop(top: textView.bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 14, leftConstant: 32, bottomConstant: 0, rightConstant: 32)
+    }
 
     _ = lineSeperatorView.anchor(top: topAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: frame.height - 160, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 1)
   }

@@ -24,12 +24,6 @@ class HomeController: UIViewController, UICollectionViewDelegate, UICollectionVi
     return cv
   }()
 
-  let tabBarView = UIView {
-    $0.backgroundColor = .clear
-    $0.layer.borderWidth = 1
-    $0.layer.borderColor = UIColor(white: 0.95, alpha: 1).cgColor
-  }
-
   lazy var generateButton: UIButton = {
     let button = UIButton(type: .system)
     button.backgroundColor = .white
@@ -40,11 +34,14 @@ class HomeController: UIViewController, UICollectionViewDelegate, UICollectionVi
     return button
   }()
 
+  let statusBarView = UIView(frame: UIApplication.shared.statusBarFrame)
+
   // MARK: - Lifecycle
 
   override func viewDidLoad() {
     super.viewDidLoad()
     view.addSubview(collectionView)
+    view.addSubview(statusBarView)
     navigationSwipe()
     setupCollectionView()
     setupTabBar()
@@ -52,24 +49,28 @@ class HomeController: UIViewController, UICollectionViewDelegate, UICollectionVi
   }
 
   override var prefersStatusBarHidden: Bool {
-    return true
+    return !iPhoneX()
   }
 
   fileprivate func setupCollectionView() {
     collectionView.register(TintCell.self, forCellWithReuseIdentifier: cellId)
-    collectionView.anchorToTop(top: view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor)
+    self.collectionView.snp.makeConstraints { make in make.edges.equalToSuperview() }
     collectionView.alwaysBounceVertical = false
   }
 
   fileprivate func setupTabBar() {
-    view.addSubview(tabBarView)
     view.addSubview(generateButton)
 
-    _ = tabBarView.anchor(top: nil, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 62)
-    tabBarView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-
-    _ = generateButton.anchor(top: tabBarView.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 58)
-
+    self.generateButton.snp.makeConstraints { make in
+      if #available(iOS 11, *) {
+        make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottomMargin)
+      } else {
+        make.bottom.equalTo(view.snp.bottom)
+      }
+      make.left.equalTo(view.snp.left)
+      make.right.equalTo(view.snp.right)
+      make.height.equalTo(58)
+    }
   }
 
   // MARK: - Navigation
@@ -146,6 +147,7 @@ class HomeController: UIViewController, UICollectionViewDelegate, UICollectionVi
     let tintArray = [tint3, tint2, tint, currentColor, shade1, shade2, shade3]
 
     tintColors = tintArray
+    statusBarView.backgroundColor = currentColor.currentColor.tinted(amount: 0.6)
     collectionView.reloadData()
   }
 
@@ -179,7 +181,11 @@ class HomeController: UIViewController, UICollectionViewDelegate, UICollectionVi
   }
 
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    return CGSize(width: view.frame.width, height: (view.frame.height - 58) / 7)
+    if #available(iOS 11, *) {
+      return CGSize(width: view.frame.width, height: (view.safeAreaLayoutGuide.layoutFrame.height - 58) / 7)
+    } else {
+      return CGSize(width: view.frame.width, height: (view.frame.height - 58 ) / 7)
+    }
   }
 
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

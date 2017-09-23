@@ -55,11 +55,16 @@ class TintCell: UICollectionViewCell {
     addSubview(currentBackground)
     addSubview(numberLabel)
 
-    self.currentBackground.snp.makeConstraints { (make) in
-      make.top.left.right.bottom.equalToSuperview()
+    self.currentBackground.snp.makeConstraints { make in
+      if #available(iOS 11.0, *) {
+        make.top.equalTo(safeAreaLayoutGuide.snp.topMargin)
+      } else {
+        make.top.equalToSuperview()
+      }
+      make.left.right.bottom.equalToSuperview()
     }
 
-    self.numberLabel.snp.makeConstraints { (make) in
+    self.numberLabel.snp.makeConstraints { make in
       make.top.equalTo(self.currentBackground.snp.centerY).offset(-5)
       make.left.equalTo(16)
     }

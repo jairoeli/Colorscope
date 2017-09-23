@@ -54,8 +54,13 @@ class ColorHarmoniesController: UIViewController, UICollectionViewDelegate, UICo
     return button
   }()
 
+  let navBar = UIView {
+    $0.backgroundColor = .clear
+  }
+
   let dismissButton = UIImageView {
     $0.image = #imageLiteral(resourceName: "left arrow").withRenderingMode(.alwaysTemplate)
+    $0.contentMode = .scaleAspectFit
     $0.tintColor = Eden.Independence.color
   }
 
@@ -109,8 +114,16 @@ class ColorHarmoniesController: UIViewController, UICollectionViewDelegate, UICo
 
   fileprivate func setupTabBar() {
     view.addSubview(tabBar)
-    view.addConstraints(withFormat: "H:|[v0]|", views: tabBar)
-    view.addConstraints(withFormat: "V:|-150-[v0(50)]", views: tabBar)
+
+    self.tabBar.snp.makeConstraints { make in
+      if iPhoneX() == true {
+        make.top.equalTo(155)
+      } else {
+        make.top.equalTo(150)
+      }
+      make.left.right.equalToSuperview()
+      make.height.equalTo(50)
+    }
   }
 
   // MARK: - Scroll
