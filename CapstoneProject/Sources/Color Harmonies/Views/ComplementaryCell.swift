@@ -90,17 +90,32 @@ class ComplementaryCell: UICollectionViewCell {
     addSubview(complementaryBackgroundColor)
     addSubview(complementaryLabel)
 
-    _ = clearBackground.anchor(top: topAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 200)
+    self.clearBackground.snp.makeConstraints { make in
+      make.top.left.right.equalToSuperview()
+      make.height.equalTo(200)
+    }
 
-    _ = mainKeyColor.anchor(top: clearBackground.bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: (frame.height - 200) / 2)
+    self.mainKeyColor.snp.makeConstraints { make in
+      make.top.equalTo(clearBackground.snp.bottom)
+      make.left.right.equalToSuperview()
+      make.height.equalTo((frame.height - 200) / 2)
+    }
 
-    _ = hexLabel.anchor(top: mainKeyColor.centerYAnchor, left: nil, bottom: nil, right: nil, topConstant: -30, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
-    hexLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+    self.hexLabel.snp.makeConstraints { make in
+      make.top.equalTo(mainKeyColor.snp.centerY).offset(-25)
+      make.centerX.equalToSuperview()
+    }
 
-    _ = complementaryBackgroundColor.anchor(top: mainKeyColor.bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: (frame.height - 200) / 2)
+    self.complementaryBackgroundColor.snp.makeConstraints { make in
+      make.top.equalTo(self.mainKeyColor.snp.bottom)
+      make.left.right.equalToSuperview()
+      make.height.equalTo((frame.height - 200) / 2)
+    }
 
-    _ = complementaryLabel.anchor(top: complementaryBackgroundColor.centerYAnchor, left: nil, bottom: nil, right: nil, topConstant: -30, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
-    complementaryLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+    self.complementaryLabel.snp.makeConstraints { make in
+      make.top.equalTo(self.complementaryBackgroundColor.snp.centerY).offset(-25)
+      make.centerX.equalToSuperview()
+    }
 
   }
 

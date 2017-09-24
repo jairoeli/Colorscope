@@ -75,11 +75,23 @@ class TutorialController: UIViewController, UICollectionViewDelegate, UICollecti
     view.addSubview(dismissButton)
     view.addSubview(cancelBackground)
 
-    pageControlBottomAnchor = pageControl.anchor(top: nil, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 40)[1]
+    if #available(iOS 11.0, *) {
+      pageControlBottomAnchor = pageControl.anchor(top: nil, left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 40)[1]
+    } else {
+      pageControlBottomAnchor = pageControl.anchor(top: nil, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 40)[1]
+    }
 
-    _ = cancelBackground.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 60, heightConstant: 70)
+    if #available(iOS 11.0, *) {
+      _ = cancelBackground.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 60, heightConstant: 70)
+    } else {
+      _ = cancelBackground.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 60, heightConstant: 70)
+    }
 
-    _ = dismissButton.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: 28, leftConstant: 20, bottomConstant: 0, rightConstant: 0, widthConstant: 12, heightConstant: 12)
+    if #available(iOS 11.0, *) {
+      _ = dismissButton.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: 28, leftConstant: 20, bottomConstant: 0, rightConstant: 0, widthConstant: 12, heightConstant: 12)
+    } else {
+      _ = dismissButton.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: 28, leftConstant: 20, bottomConstant: 0, rightConstant: 0, widthConstant: 12, heightConstant: 12)
+    }
 
     // use auto layout
     collectionView.anchorToTop(top: view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor)

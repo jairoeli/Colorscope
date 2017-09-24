@@ -11,35 +11,77 @@ import UIKit
 extension ColorHarmoniesController {
 
   override var prefersStatusBarHidden: Bool {
-    return true
+    return !iPhoneX()
   }
 
   // MARK: - Setup
   func setupView() {
+    view.addSubview(navBar)
     view.addSubview(titleLabel)
-    view.addSubview(dismissButton)
     view.addSubview(cancelBackground)
+    view.addSubview(dismissButton)
     view.addSubview(infoButton)
     view.addSubview(infoBackground)
     view.addSubview(copyButton)
     view.addSubview(copyBackground)
 
-    _ = titleLabel.anchor(top: view.topAnchor, left: nil, bottom: nil, right: nil, topConstant: 85, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
-    titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+    self.navBar.snp.makeConstraints { make in
+      if #available(iOS 11.0, *), iPhoneX() == true {
+        make.top.equalTo(view.safeAreaLayoutGuide.snp.topMargin)
+        make.left.right.equalToSuperview()
+        make.height.equalTo(34)
+      } else {
+        make.top.equalTo(view.snp.top).offset(16)
+      }
+    }
 
-    _ = cancelBackground.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 70, heightConstant: 70)
+    self.dismissButton.snp.makeConstraints { (make) in
+      make.top.equalTo(navBar.snp.top).offset(8)
+      make.left.equalTo(10)
+      make.size.equalTo(16)
+    }
 
-    _ = dismissButton.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: 24, leftConstant: 10, bottomConstant: 0, rightConstant: 0, widthConstant: 16, heightConstant: 16)
+    self.cancelBackground.snp.makeConstraints { make in
+      make.top.equalTo(navBar.snp.top)
+      make.left.equalToSuperview()
+      make.bottom.equalTo(navBar.snp.bottom)
+      make.width.equalTo(40)
+    }
 
-    _ = infoBackground.anchor(top: view.topAnchor, left: nil, bottom: nil, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 70, heightConstant: 70)
+    self.copyButton.snp.makeConstraints { make in
+      make.top.equalTo(navBar.snp.top).offset(8)
+      make.centerX.equalToSuperview()
+      make.size.equalTo(16)
+    }
 
-    _ = infoButton.anchor(top: view.topAnchor, left: nil, bottom: nil, right: view.rightAnchor, topConstant: 24, leftConstant: 0, bottomConstant: 0, rightConstant: 12, widthConstant: 20, heightConstant: 20)
+    self.copyBackground.snp.makeConstraints { make in
+      make.top.equalTo(navBar.snp.top)
+      make.centerX.equalToSuperview()
+      make.bottom.equalTo(navBar.snp.bottom)
+      make.width.equalTo(40)
+    }
 
-    _ = copyButton.anchor(top: view.topAnchor, left: nil, bottom: nil, right: nil, topConstant: 24, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 20, heightConstant: 20)
-    copyButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+    self.infoButton.snp.makeConstraints { make in
+      make.top.equalTo(navBar.snp.top).offset(8)
+      make.right.equalTo(-10)
+      make.size.equalTo(18)
+    }
 
-    _ = copyBackground.anchor(top: view.topAnchor, left: nil, bottom: nil, right: nil, topConstant: 4, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 60, heightConstant: 60)
-    copyBackground.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+    self.infoBackground.snp.makeConstraints { make in
+      make.top.equalTo(navBar.snp.top)
+      make.bottom.equalTo(navBar.snp.bottom)
+      make.right.equalToSuperview()
+      make.width.equalTo(44)
+    }
+
+    self.titleLabel.snp.makeConstraints { make in
+      if #available(iOS 11.0, *), iPhoneX() == true {
+        make.top.equalTo(navBar.safeAreaLayoutGuide.snp.bottomMargin).offset(20)
+      } else {
+        make.top.equalTo(navBar.snp.bottom).offset(30)
+      }
+      make.centerX.equalToSuperview()
+    }
   }
 
   // MARK: - Handle Action

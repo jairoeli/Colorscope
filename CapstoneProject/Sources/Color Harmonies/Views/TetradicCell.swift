@@ -136,27 +136,55 @@ class TetradicCell: UICollectionViewCell {
     addSubview(tetradicLabel3)
     addSubview(tetradicLabel4)
 
-    _ = clearBackground.anchor(top: topAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 200)
+    self.clearBackground.snp.makeConstraints { make in
+      make.top.left.right.equalToSuperview()
+      make.height.equalTo(200)
+    }
 
-    _ = tetradicBackgroundColor.anchor(top: clearBackground.bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: (frame.height - 200) / 4)
+    self.tetradicBackgroundColor.snp.makeConstraints { make in
+      make.top.equalTo(self.clearBackground.snp.bottom)
+      make.left.right.equalToSuperview()
+      make.height.equalTo((frame.height - 200) / 4)
+    }
 
-    _ = tetradicLabel.anchor(top: tetradicBackgroundColor.centerYAnchor, left: nil, bottom: nil, right: nil, topConstant: -20, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
-    tetradicLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+    self.tetradicLabel.snp.makeConstraints { make in
+      make.top.equalTo(self.tetradicBackgroundColor.snp.centerY).offset(-20)
+      make.centerX.equalToSuperview()
+    }
 
-    _ = tetradicBackgroundColor2.anchor(top: tetradicBackgroundColor.bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: (frame.height - 200) / 4)
+    self.tetradicBackgroundColor2.snp.makeConstraints { make in
+      make.top.equalTo(self.tetradicBackgroundColor.snp.bottom)
+      make.left.right.equalToSuperview()
+      make.height.equalTo((frame.height - 200) / 4)
+    }
 
-    _ = tetradicLabel2.anchor(top: tetradicBackgroundColor2.centerYAnchor, left: nil, bottom: nil, right: nil, topConstant: -20, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
-    tetradicLabel2.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+    self.tetradicLabel2.snp.makeConstraints { make in
+      make.top.equalTo(self.tetradicBackgroundColor2.snp.centerY).offset(-20)
+      make.centerX.equalToSuperview()
+    }
 
-    _ = tetradicBackgroundColor3.anchor(top: tetradicBackgroundColor2.bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: (frame.height - 200) / 4)
+    self.tetradicBackgroundColor3.snp.makeConstraints { make in
+      make.top.equalTo(self.tetradicBackgroundColor2.snp.bottom)
+      make.left.right.equalToSuperview()
+      make.height.equalTo((frame.height - 200) / 4)
+    }
 
-    _ = tetradicLabel3.anchor(top: tetradicBackgroundColor3.centerYAnchor, left: nil, bottom: nil, right: nil, topConstant: -20, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
-    tetradicLabel3.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+    self.tetradicLabel3.snp.makeConstraints { make in
+      make.top.equalTo(self.tetradicBackgroundColor3.snp.centerY).offset(-20)
+      make.centerX.equalToSuperview()
+    }
 
-    _ = tetradicBackgroundColor4.anchor(top: tetradicBackgroundColor3.bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: (frame.height - 200) / 4)
+    self.tetradicBackgroundColor4.snp.makeConstraints { make in
+      make.top.equalTo(self.tetradicBackgroundColor3.snp.bottom)
+      make.left.right.equalToSuperview()
+      make.height.equalTo((frame.height - 200) / 4)
+    }
 
-    _ = tetradicLabel4.anchor(top: tetradicBackgroundColor4.centerYAnchor, left: nil, bottom: nil, right: nil, topConstant: -20, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
-    tetradicLabel4.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+    self.tetradicLabel4.snp.makeConstraints { make in
+      make.top.equalTo(self.tetradicBackgroundColor4.snp.centerY).offset(-20)
+      make.centerX.equalToSuperview()
+    }
+
   }
 
 }
