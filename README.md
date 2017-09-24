@@ -10,6 +10,7 @@ Colorscope is an iOS app that helps you discover beautiful color schemes based o
 * Pure programmatic views approach
 * Color harmony algorithm
 * Universal Clipboard
+* iPhone X Compatibility
 
 ## License
 
