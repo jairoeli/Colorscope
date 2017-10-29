@@ -23,6 +23,7 @@ class GetStartedCell: UICollectionViewCell {
     let button = UIButton(type: .system)
     button.backgroundColor = UIColor(white: 0.9, alpha: 1)
     button.setTitle("GET STARTED", for: .normal)
+    button.layer.cornerRadius = DeviceSize.adjust(0, for: [.iphoneX: 6])
     button.titleLabel?.font = FontBook.Medium.of(size: 18)
     button.setTitleColor(Eden.Independence.color, for: .normal)
     button.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
@@ -54,7 +55,7 @@ class GetStartedCell: UICollectionViewCell {
     _ = headlineLabel.anchor(top: lineSeperatorView.bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 24, leftConstant: 28, bottomConstant: 0, rightConstant: 28, widthConstant: 0, heightConstant: 0)
 
     if #available(iOS 11.0, *) {
-      _ = signUp.anchor(top: nil, left: leftAnchor, bottom: safeAreaLayoutGuide.bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 60)
+      _ = signUp.anchor(top: nil, left: leftAnchor, bottom: safeAreaLayoutGuide.bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: DeviceSize.adjust(0, for: [.iphoneX: 16]), bottomConstant: 0, rightConstant: DeviceSize.adjust(0, for: [.iphoneX: 16]), widthConstant: 0, heightConstant: 60)
     } else {
       // Fallback on earlier versions
       _ = signUp.anchor(top: nil, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 60)

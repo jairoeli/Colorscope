@@ -75,10 +75,10 @@ extension ColorHarmoniesController {
     }
 
     self.titleLabel.snp.makeConstraints { make in
-      if #available(iOS 11.0, *), iPhoneX() == true {
-        make.top.equalTo(navBar.safeAreaLayoutGuide.snp.bottomMargin).offset(20)
+      if #available(iOS 11.0, *) {
+        make.top.equalTo(navBar.safeAreaLayoutGuide.snp.bottomMargin).offset(DeviceSize.adjust(38, for: [.iphoneX: 20]))
       } else {
-        make.top.equalTo(navBar.snp.bottom).offset(30)
+        make.top.equalTo(navBar.snp.bottom).offset(38)
       }
       make.centerX.equalToSuperview()
     }
