@@ -72,6 +72,7 @@
 		9CE5E9371DD26050006242EB /* SWColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE5E9361DD26050006242EB /* SWColor.swift */; };
 		9CEC6B5C1DC7D80000C20156 /* WelcomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEC6B5B1DC7D80000C20156 /* WelcomeCell.swift */; };
 		9CEC6B5E1DC7DDFB00C20156 /* SelectedColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEC6B5D1DC7DDFB00C20156 /* SelectedColorCell.swift */; };
+		9CF0140A1FA61F99003C9183 /* DeviceSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF014091FA61F99003C9183 /* DeviceSize.swift */; };
 		B9B9DD1020D016D8A427B5FB /* Pods_Colorscope.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4247BFC9D26E1480CD0AA40 /* Pods_Colorscope.framework */; };
 /* End PBXBuildFile section */
 
@@ -147,6 +148,7 @@
 		9CE5E9361DD26050006242EB /* SWColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SWColor.swift; path = "Sources/Color/Dynamic Color/SWColor.swift"; sourceTree = "<group>"; };
 		9CEC6B5B1DC7D80000C20156 /* WelcomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeCell.swift; path = Sources/Walkthrough/Views/WelcomeCell.swift; sourceTree = "<group>"; };
 		9CEC6B5D1DC7DDFB00C20156 /* SelectedColorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectedColorCell.swift; path = Sources/Walkthrough/Views/SelectedColorCell.swift; sourceTree = "<group>"; };
+		9CF014091FA61F99003C9183 /* DeviceSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DeviceSize.swift; path = Sources/Utils/DeviceSize.swift; sourceTree = "<group>"; };
 		B4247BFC9D26E1480CD0AA40 /* Pods_Colorscope.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Colorscope.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -376,6 +378,7 @@
 				9C3577E21D9F2FEC008BCA9F /* Dao.swift */,
 				9C3577DC1D9F2FEC008BCA9F /* LayoutConstraint.swift */,
 				9C3C475F1DA55B56000AEC00 /* UserDefaults+helpers.swift */,
+				9CF014091FA61F99003C9183 /* DeviceSize.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -589,6 +592,7 @@
 				9C8B02DA1DB5DE9B0037128B /* HSL.swift in Sources */,
 				9C3577E61D9F2FEC008BCA9F /* WalkthroughController.swift in Sources */,
 				9C00D8891DCAAB710045DF09 /* TransitionAnimator.swift in Sources */,
+				9CF0140A1FA61F99003C9183 /* DeviceSize.swift in Sources */,
 				9C85E6671DAE9C2700A3034B /* AnalogousCell.swift in Sources */,
 				9C3577E41D9F2FEC008BCA9F /* LayoutConstraint.swift in Sources */,
 				9C00D8801DCAAB710045DF09 /* PopupDialogButton.swift in Sources */,
